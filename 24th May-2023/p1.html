@@ -1,0 +1,54 @@
+<!-- random color generator and tables -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    
+    <title style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">JavaScript-1</title>
+    <style>
+        #div-color{
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+        }
+        table, th, td {
+            border: 2px solid black;
+            font-family: cursive;
+            color: antiquewhite;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="background-image: url(https://cdn.wallpapersafari.com/48/43/cuijxp.jpeg);">
+        <center>
+            <h1 style="color: antiquewhite;">demonstartion of random color generator</h1>
+            <div id="div-color">
+                <h2 style="color: antiquewhite;">HELLO</h2>
+                <table style="width: 100%;">
+                    <tr>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>ph.no</th>
+                    </tr>>
+                    <tr>
+                        <td>ganesh</td>
+                        <td>babbluganesh22@gmail.com</td>
+                        <td>9550927162</td>
+                    </tr>
+                </table>
+            </div> <br>
+            <input type="submit" value="click to change color" onclick="changeColor()">
+        </center>
+    </div>
+    <script>
+        function changeColor() {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            document.getElementById('div-color').style.backgroundColor = `#${randomColor}`;
+        }
+        
+    </script>
+</body>
+</html>

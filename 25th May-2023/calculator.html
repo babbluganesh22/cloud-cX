@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <!-- ? -->
+    <style>
+        .calc{
+            font-style: italic;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color:blanchedalmond;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="calc">
+                <h1>Calculator App</h1>
+                <input type="number" name="first" id="input1"> <br> <br>
+                <input type="number" name="second" id="input2"> <br> <br>
+                <input type="button" value="sum" onclick="sum()">
+                <input type="button" value="difference" onclick="difference()">
+                <input type="button" value="product" onclick="product()">
+        </div>
+        <b>Output :</b>
+        <output id="output"></output>
+    </center>
+    <script>
+        function sum(){
+            const fn = document.getElementById('input1').value;
+            const sn = document.getElementById('input2').value;
+            document.getElementById('output').innerText = Number(fn) + Number(sn);
+        }
+        function difference(){
+            const fn = document.getElementById('input1').value;
+            const sn = document.getElementById('input2').value;
+            document.getElementById('output').innerText = Number(fn) - Number(sn);
+        }
+        function product(){
+            const fn = document.getElementById('input1').value;
+            const sn = document.getElementById('input2').value;
+            document.getElementById('output').innerText = Number(fn) * Number(sn);
+        }
+    </script>
+</body>
+</html>

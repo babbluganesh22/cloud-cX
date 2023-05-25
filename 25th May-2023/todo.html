@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <!--  -->
+    <style>
+        #list{
+            border: 1px solid black;
+            background-color: aquamarine;
+            border-radius: 15px;
+            height: 200px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="list">
+            <h1 style="color: snow;">ToDo app</h1>
+            <input type="text" name="todo instance" id="input" style="width: 300px; height: 50px; border-radius: 1px; border-color: aquamarine;">
+            <input type="submit" value="add ToDo" onclick="addToDo()">
+            
+        </div>
+        <ol id="tlist" style="border: 15px; ;">
+        </ol>
+    </center>
+    <script>
+        function addToDo() {
+            const mainL = document.getElementById('tlist');
+            const newTodo= document.createElement('li');
+            newTodo.innerText = document.getElementById('input').value;
+            mainL.appendChild(newTodo)
+        }
+    </script>
+</body>
+</html>

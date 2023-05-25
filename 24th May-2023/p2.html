@@ -1,0 +1,45 @@
+<!-- twitter login page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-2</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-1024.png">
+</head>
+<!-- login page of twitter  -->
+<!-- validating email and password format -->
+<body style="background-image: url(https://www.shropshirestar.com/resizer/JgRsduSKrRoeyixKeytIX9HlbR8=/1200x0/cloudfront-us-east-1.images.arcpublishing.com/mna/GIJ3HYTJAFEVVP5BHE5DUXFB7Y.jpg); ">
+   <center>
+    <h1 style="color: aquamarine; font-size: 70px; "><b>Welcome</h1>
+    <h2 style="color: aquamarine; font-size: 50px;"><b>Login/Signin to continue</h2>
+        <input type="email" name="enter email" id="email">
+        <br>
+        <br>
+        <input type="password" name="enter password" id="password">
+        
+        <p id="xx">
+            <input type="submit" value="Login" onclick="validate()">
+        </p>
+   </center>
+   <script>
+    function validate(){
+        var email= document.getElementById("email").value;
+        var password=document.getElementById("password").value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if(emailPattern.test(email) && passwordPattern.test(password)){
+            //document.getElementById('xx').innerHTML('validated');
+            document.write('validated');
+        }
+        else{
+           // document.getElementById('xx').innerHTML('invalid details');
+            document.write('invalid');
+        }
+        
+    }
+   </script>
+    
+</body>
+</html>

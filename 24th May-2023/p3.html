@@ -1,0 +1,30 @@
+<!-- bulb on/off -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb</title>
+    <link rel="icon" href="https://th.bing.com/th/id/R.a3f9fb567ec1ebd7544e4b207d103e74?rik=%2fwwrpk%2bS%2f%2bLp8Q&riu=http%3a%2f%2fwww.bplampsupply.com%2fimages%2fproducts%2flg%2f47261_alt_0.jpg&ehk=dHva4pcJB3%2f6PpX56oouwOrDRpY8vJ9GfYfXTHdN5%2fQ%3d&risl=&pid=ImgRaw&r=0">
+</head>
+<body>
+    <script>
+        function light(x){
+            var y;
+            if(x==1){
+                y = 'https://toppng.com/public/uploads/preview/light-bulb-on-off-png-11553940319kdxsp3rf0i.png'
+            }
+            else if(x==0){
+                y = 'https://th.bing.com/th/id/OIP.g6ELgpMBfTe6728vdTQw0wHaHk?pid=ImgDet&rs=1'
+            }
+            document.getElementById('myimg').src=y;
+        }
+    </script>
+    <center>
+        <img id="myimg" src="https://th.bing.com/th/id/OIP.g6ELgpMBfTe6728vdTQw0wHaHk?pid=ImgDet&rs=1" alt="bulbon" width="500px" height="500px" > <br>
+    <button type="button" value="light on" onclick="light(1)">Light On</button>
+    <button type="button" value="light off" onclick="light(0)">Light Off</button>
+    </center>
+</body>
+</html>
