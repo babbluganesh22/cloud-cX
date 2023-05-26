@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        #age {
+            border: 5px solid greenyellow;
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="age">
+            <h1>Age Calculator</h1>
+            <input type="date" name="dob" id="input" style="height: 25px; "  > 
+            <br>
+            <br>
+            <input type="submit" value="calculate age" onclick="calc()">
+            <p id="output"></p>
+        </div>
+    </center>
+    <script>
+        function calc(){
+            const input = document.getElementById('input').value;
+            const dob = new Date(input);
+            const currentdate = new Date() ;
+            let diffInYears =(currentdate.getTime() - dob.getTime()) / 1000;
+            diffInYears = diffInYears / (60 * 60 * 24);
+            const output = Math.abs(Math.round(diffInYears/365));
+            
+            document.getElementById('output').innerText = `you are ${output} old`;
+        }
+    </script>
+</body>
+</html>
